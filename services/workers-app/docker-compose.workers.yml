@@ -1,0 +1,45 @@
+version: '2'
+services:
+  workers:
+    build: .
+    container_name: workers_app
+    volumes:
+      - .:/workers
+    ports:
+      - "5000:5000"
+
+  selenium-hub:
+    image: selenium/hub:latest
+    container_name: selenium_hub
+    ports:
+      - "127.0.0.1:4444:4444"
+    environment:
+      - GRID_BROWSER_TIMEOUT=60
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome-debug:
+    image: selenium/node-chrome-debug:latest
+    container_name: chrome_debug
+    ports:
+      - "127.0.0.1:5900:5900"
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - NODE_APPLICATION_NAME=debug
+    volumes:
+      - /dev/shm:/dev/shm
+
+  chrome:
+    image: selenium/node-chrome:latest
+    container_name: chrome
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+    volumes:
+      - /dev/shm:/dev/shm
+
+networks:
+  default:
+    external:
+      name: projectmonarch_default

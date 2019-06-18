@@ -1,0 +1,27 @@
+version: "2"
+services:
+  workers:
+    extends:
+        file: services/workers-app/docker-compose.workers.yml
+        service: workers
+
+  selenium-hub:
+    extends:
+        file: services/workers-app/docker-compose.workers.yml
+        service: selenium-hub
+
+  chrome:
+    extends:
+        file: services/workers-app/docker-compose.workers.yml
+        service: chrome
+
+  chrome-debug:
+    extends:
+        file: services/workers-app/docker-compose.workers.yml
+        service: chrome-debug
+
+
+networks:
+  default:
+    external:
+      name: projectmonarch_default

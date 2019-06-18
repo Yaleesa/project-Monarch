@@ -1,0 +1,938 @@
+[
+    {
+        "name": "Wetherspoons UK Cleaner staff",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.jdwetherspooncareers.co.uk/careercenter/vacancySearch.php?category=cleaner&postcode=&withinMiles=30&x=22&y=19",
+            "vacancy_xc_path": "//*[@class=\"apply\"]/a",
+            "function": "[\"\", \"catering\", \"facility\"]",
+            "long_desc": "//*[@class=\"career_description\"][2]",
+            "title": "//*[@class=\"career_title applysuggest\"]/parent::div",
+            "location": "//*[@class=\"career_description\"][1]",
+            "job_type": "//tr[contains(., \"Contract type\")]/td",
+            "next_page_xc_path": "//*[@id=\"PaginationThePages\"]/a[last()]",
+            "company": "Wetherspoon",
+            "customer_name": "Wetherspoon"
+        }
+    },
+    {
+        "name": "Tesco UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.tesco-careers.com/search-and-apply/",
+            "vacancy_xc_path": "//*[@class=\"job-role\"]/a",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[@class=\"T1\"][contains(.,\"Location\")] | //*[@class=\"job-details__row row\"]",
+            "title": "//*[@class=\"job-details-hero-component__box\"]/h1",
+            "customer_name": "Tesco",
+            "apply_url": "//*[@class=\"job-details__apply-btn\"]/a",
+            "short_desc": "Work for TESCO! One of the biggest and most successful supermarkets in the UK.",
+            "location": "substring-after(//*[@class=\"T1\"][contains(.,\"Location\")], \"Location: \")",
+            "next_page_xc_path": "//*[@class=\"ddl_plp_pagination\"]/span[last()]/a",
+            "company": "Tesco"
+        }
+    },
+    {
+        "name": "Whitbread - WhitbreadInns UK",
+        "country": "UK",
+        "config": {
+            "vacancy_xc_path": "//*[@class=\"job-item\"]//a",
+            "function": "[\"\", \"catering\"]",
+            "long_desc": "//*[@class=\"mobile-job-details-btns\"]/following-sibling::*",
+            "title": "//*[@class=\"job-details-header\"]",
+            "company": "Whitbread",
+            "customer_name": "Whitbread",
+            "location": "//h2[contains(., \"Location\")]/following-sibling::span",
+            "apply_url": "//div[contains(@class, \"job-details-container\")]/div[2]/a[1]",
+            "job_type": "parttime",
+            "start_url": "https://www.whitbreadcareers.com/search-and-apply/?mapview=false&feed=WhitbreadInns&category=teammemberbarista+teammemberfrontofhouseteammember+teammembergroundfloorteammember+teammemberhousekeepingteammember+teammembermaintenanceteammember+teammembernightreceptionteammember+teammemberrestaurantkitchenteammember",
+            "short_desc": "Whitebread Inns is a family favourite serving traditional pub food in a welcoming, friendly atmosphere."
+        }
+    },
+    {
+        "name": "Bosch Intern UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://careers.smartrecruiters.com/BoschGroup/uk?search=intern",
+            "vacancy_xc_path": "//*[@class=\"opening-header\"]/following-sibling::ul//a[not(contains(@class, \"js-more\"))]",
+            "first_click_ons": "//*[@class=\"opening-header\"]/following-sibling::ul//a[contains(@class, \"js-more\")]",
+            "function": "[\"\", \"technical_other\"]",
+            "company": "Bosch",
+            "long_desc": "//h1/following-sibling::*/*[not(contains(@class, \"job-apply\") or contains(., \"Privacy Policy\") or contains(@id, \"st-embed-map\"))]",
+            "customer_name": "Bosch",
+            "short_desc": "//h1/following-sibling::*/*[contains(@id, \"st-companyDescription\")]/div",
+            "title": "//h1",
+            "job_type": "internship"
+        }
+    },
+    {
+        "name": "New Look UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://apply.newlook.jobs/vacancies/#results",
+            "vacancy_xc_path": "//*[@class=\"job-list__item\"]/div/h2/a[contains(., \"Sales Advisor\")]",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[contains(@class, \"more_about_the_role\")]/following-sibling::*",
+            "title": "//h2",
+            "next_page_xc_path": "//a[@id=\"next_page\"]",
+            "company": "NewLook",
+            "customer_name": "NewLook",
+            "job_type": "parttime",
+            "short_desc": "//p[contains(., \"About Us\")]/following-sibling::p[1]",
+            "location": "//*[@class=\"job-details__text value_store_location\"]",
+            "apply_url": "//*[@class=\"job-details__col--right\"]/a"
+        }
+    },
+    {
+        "name": "Domino's Store Crew UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://isw.changeworknow.co.uk/dominos/vms/e/stores/search/edit",
+            "vacancy_xc_path": "//*[@class=\"col-md-8 position-search-results\"]//*[@class=\"panel-body\"]/*[@class=\"position_opening\"]//*[@class=\"panel-heading\"]//*[@class=\"panel-title\"]/a[contains(., \"Store Crew\")]",
+            "function": "[\"\", \"catering\"]",
+            "next_page_xc_path": "//*[@class=\"col-md-8 position-search-results\"]//*[@class=\"panel-body\"]/div[last()]//a[last()]",
+            "title": "//*[@id=\"wrapper\"]/*[@id=\"position_display\"]/*[@class=\"panel panel-default\"]/*[@class=\"panel-body\"]/*[@class=\"job-title\"]",
+            "long_desc": "//*[@class=\"job-title\"]/following-sibling::div/p",
+            "location": "//*[@id=\"wrapper\"]//*[@id=\"position-info-box\"]//div[@id=\"job-cat-1\"]//div[@class=\"panel-body\"]//p[1]/text()",
+            "company": "Dominos",
+            "customer_name": "Dominos",
+            "apply_url": "//*[@id=\"wrapper\"]//div[@id=\"position_display\"]/*[@class=\"panel panel-default\"]/*[@class=\"panel-body\"]/a[contains(@class, \"btn btn-primary pull-right\")]",
+            "job_type": "parttime"
+        }
+    },
+    {
+        "name": "Wetherspoons UK Bar staff",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.jdwetherspooncareers.co.uk/careercenter/vacancySearch.php?category=bar-staff&postcode=&withinMiles=30&x=22&y=19",
+            "vacancy_xc_path": "//*[@class=\"apply\"]/a",
+            "function": "[\"\", \"catering\", \"facility\"]",
+            "long_desc": "//*[@class=\"career_description\"][2]",
+            "title": "//*[@class=\"career_title applysuggest\"]/parent::div",
+            "location": "//*[@class=\"career_description\"][1]",
+            "job_type": "//tr[contains(., \"Contract type\")]/td",
+            "next_page_xc_path": "//*[@id=\"PaginationThePages\"]/a[last()]",
+            "company": "Wetherspoon",
+            "customer_name": "Wetherspoon"
+        }
+    },
+    {
+        "name": "Tesco Manchester UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.tesco-careers.com/search-and-apply/?nodeId=1206&type=1&location=manchester&radius=10",
+            "vacancy_xc_path": "//*[@class=\"job-role\"]/a",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[@class=\"job-details__row row\"]/div/p |//*[@class=\"job-details__row row\"]/div/h3[not(contains(.,\"Shift pattern\"))] | //*[@class=\"job-details__row row\"]/div/ul | //*[@class=\"job-details__row row\"]/h2",
+            "title": "//*[@class=\"job-details-hero-component__box\"]/h1",
+            "customer_name": "Tesco",
+            "apply_url": "//*[@class=\"job-details__apply-btn\"]/a",
+            "short_desc": "Work for TESCO! One of the biggest and most successful supermarkets in the UK.",
+            "next_page_xc_path": "//*[@class=\"ddl_plp_pagination\"]/span[last()]/a",
+            "company": "Tesco",
+            "location": "Manchester"
+        }
+    },
+    {
+        "name": "PWC UK",
+        "country": "UK",
+        "config": {
+            "start_url": "http://www.careersstudent.pwc.co.uk/listjobs/All/",
+            "vacancy_xc_path": "//*[@class=\"coloriginaljobtitle\"]/a",
+            "function": "[\"\"]",
+            "title": "//*[@class=\"detailHeading\"]",
+            "long_desc": "//*[@class=\"desc\"]",
+            "location": "//*[@class=\"dataBlock\"]/div[contains(., \"Location\")]/following-sibling::div[1]/text()",
+            "next_page_xc_path": "//*[@class=\"pager-next\"]",
+            "apply_url": "//*[@class=\"applyBtnBottomDiv\"]/a",
+            "company": "PWC",
+            "customer_name": "PWC"
+        }
+    },
+    {
+        "name": "Pets at Home - Part-Time UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.petsathomejobs.com/search-jobs-and-apply",
+            "vacancy_xc_path": "//*[@class=\"jobGrid\"]//div/p[contains(., \"Part-Time\")]/parent::div//a",
+            "function": "[\"\", \"customer_service\"]",
+            "long_desc": "//*[@itemprop=\"description\"]",
+            "title": "//*[@itemprop=\"title\"]",
+            "location": "//*[@itemprop=\"addressLocality\"] | //*[@itemprop=\"addressLocality\"]/following-sibling::text()[1] | //*[@itemprop=\"addressRegion\"]",
+            "company": "Pets at Home",
+            "customer_name": "Pets at Home",
+            "next_page_xc_path": "//*[@data-js=\"jobs-filters\"]/a",
+            "short_desc": "The Groom Room at Pets at Home is looking for Apprentice Groomers to join our quickly expending Groom Room business.",
+            "job_type": "parttime"
+        }
+    },
+    {
+        "name": "Sainsbury Retail UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://sainsburys.jobs/search-apply/?role_type=Store+Colleagues&hours=Part-time|Full-time",
+            "next_page_xc_path": "//*[@class=\"result-pagination\"]/a[contains(., \"Next\")]",
+            "vacancy_xc_path": "//*[@class=\"vacancies-listings\"]//a[@class=\"heading\"][not(contains(., \"Manager\"))][contains(@href, \"sainsbury\")]",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[@class=\"job-info\"]//*[@class=\"info1\"] | //*[@class=\"single-content-text job-description\"]",
+            "title": "//h1",
+            "job_type": "substring-before(substring-after(//*[@class=\"info1\"], \"Hours\"), \"Contract\")",
+            "company": "Sainsburys",
+            "customer_name": "Sainsburys",
+            "location": "substring-before(substring-after(//*[@class=\"info1\"], \"Location\"), \"Hours\")",
+            "apply_url": "//*[@class=\"content-inner\"]//a[contains(., \"Apply\")]",
+            "short_desc": "Our vision is to be the most trusted retailer, where people love to work and shop. That means harnessing the talent, creativity and diversity of our colleagues to ensure that customers receive great service."
+        }
+    },
+    {
+        "name": "Whitbread - PremierInn UK",
+        "country": "UK",
+        "config": {
+            "vacancy_xc_path": "//*[@class=\"job-item\"]//a",
+            "function": "[\"\", \"catering\"]",
+            "long_desc": "//*[@class=\"mobile-job-details-btns\"]/following-sibling::*",
+            "title": "//*[@class=\"job-details-header\"]",
+            "company": "Whitbread",
+            "customer_name": "Whitbread",
+            "location": "//h2[contains(., \"Location\")]/following-sibling::span",
+            "apply_url": "//div[contains(@class, \"job-details-container\")]/div[2]/a[1]",
+            "job_type": "parttime",
+            "short_desc": "Premier Inn is the UK’s largest hotel brand with over 70,000 rooms and 785 hotels.",
+            "start_url": "https://www.whitbreadcareers.com/search-and-apply/?feed=PremierInn&category=teammemberbarista+teammemberfrontofhouseteammember+teammembergroundfloorteammember+teammemberhousekeepingteammember+teammembermaintenanceteammember+teammembernightreceptionteammember+teammemberrestaurantkitchenteammember"
+        }
+    },
+    {
+        "name": "Superdrug P UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.superdrug.jobs/jobs/?jobTitle=sales%20adviser&jobLocation=&latitude=&longitude=&radius=&department=Retail%20Stores&hours=&contract=&jobType=",
+            "vacancy_xc_path": "//*[@class=\"job-results__wrapper\"]//a[contains(@class, \"job-results__item\")]",
+            "function": "[\"\", \"retail\"]",
+            "next_page_xc_path": "//*[@class=\"pagination\"]//li[contains(@class, \"pagination__active\")]/following-sibling::li[1]/a",
+            "long_desc": "//*[@class=\"row main-content\"]",
+            "title": "//h1",
+            "company": "Superdrug",
+            "customer_name": "Superdrug",
+            "apply_url": "//a[@class=\"apply-link desktop-only\"]",
+            "job_type": "parttime"
+        }
+    },
+    {
+        "name": "Whitbread - Brewers Fayre UK",
+        "country": "UK",
+        "config": {
+            "vacancy_xc_path": "//*[@class=\"job-item\"]//a",
+            "function": "[\"\", \"catering\"]",
+            "long_desc": "//*[@class=\"mobile-job-details-btns\"]/following-sibling::*",
+            "title": "//*[@class=\"job-details-header\"]",
+            "company": "Whitbread",
+            "customer_name": "Whitbread",
+            "location": "//h2[contains(., \"Location\")]/following-sibling::span",
+            "apply_url": "//div[contains(@class, \"job-details-container\")]/div[2]/a[1]",
+            "job_type": "parttime",
+            "start_url": "https://www.whitbreadcareers.com/search-and-apply/?mapview=false&feed=BrewersFayre&category=teammemberbarista+teammemberfrontofhouseteammember+teammembergroundfloorteammember+teammemberhousekeepingteammember+teammembermaintenanceteammember+teammembernightreceptionteammember+teammemberrestaurantkitchenteammember",
+            "short_desc": "Brewers Fayre is a UK licensed pub chain serving traditional pub food for over 40 years."
+        }
+    },
+    {
+        "name": "Nexus People UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://nexus-people.com/job-list?type=&distance=30&location=",
+            "vacancy_xc_path": "//*[@class=\"jobmain\"]/a",
+            "function": "[\"\", \"logistics\"]",
+            "long_desc": "//*[@class=\"job-description\"]/p | //*[@class=\"job-description\"]/ul",
+            "title": "//*[@class=\"job-description\"]/h1",
+            "company": "Nexus people",
+            "customer_name": "NexusPeople",
+            "apply_url": "//*[@class=\"button blue\"]",
+            "job_type": "substring-after(//*[@class=\"job-facts\"]/div/p[1], \"- \")",
+            "location": "//*[@class=\"job-facts\"]/div/p[2]/text()",
+            "next_page_xc_path": "//*[@class=\"nextpostslink\"]"
+        }
+    },
+    {
+        "name": "Whitbread - Cookhouse&Pub UK",
+        "country": "UK",
+        "config": {
+            "vacancy_xc_path": "//*[@class=\"job-item\"]//a",
+            "function": "[\"\", \"catering\"]",
+            "long_desc": "//*[@class=\"mobile-job-details-btns\"]/following-sibling::*",
+            "title": "//*[@class=\"job-details-header\"]",
+            "company": "Whitbread",
+            "customer_name": "Whitbread",
+            "location": "//h2[contains(., \"Location\")]/following-sibling::span",
+            "apply_url": "//div[contains(@class, \"job-details-container\")]/div[2]/a[1]",
+            "job_type": "parttime",
+            "start_url": "https://www.whitbreadcareers.com/search-and-apply/?mapview=false&feed=CookhousePub&category=teammemberbarista+teammemberfrontofhouseteammember+teammembergroundfloorteammember+teammemberhousekeepingteammember+teammembermaintenanceteammember+teammembernightreceptionteammember+teammemberrestaurantkitchenteammember",
+            "short_desc": "For a unique touch, Cookhouse and Pub combine traditional family favourites with innovative variations."
+        }
+    },
+    {
+        "name": "H&M UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://career.hm.com/content/hmcareer/en_gb/findjob.html",
+            "vacancy_xc_path": "//*[@id=\"jobListing\"]/tbody/tr/td[1]/a",
+            "company": "H&M",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[@class=\"box no-margin formatted \"]",
+            "customer_name": "HM",
+            "title": "/html/body/div[3]/div/div[3]/div/div[1]/div/div/div/h2",
+            "location": "substring-before(/html/body/div[3]/div/div[3]/div/div[1]/div/div/div/div[1]/div[1]/dl[2]/dd, \",\")",
+            "apply_url": "//*[@class=\"submit\"]/a"
+        }
+    },
+    {
+        "name": "KFC UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.lifetimetraining.co.uk/apprenticeship-vacancies/kfc/",
+            "vacancy_xc_path": "//*[@id=\"JobResults\"]//h4/a",
+            "function": "[\"\", \"catering\"]",
+            "next_page_xc_path": "//*[@id=\"page-nav-bottom\"]/ul/li[last()]/a",
+            "title": "//*[@itemprop=\"title\"]",
+            "long_desc": "//*[@class=\"job-accordion\"]",
+            "location": "substring-after(//*[contains(@itemprop, \"name\")], \"-\")",
+            "apply_url": "//*[@class=\"details-box clearfix\"]/div/a",
+            "company": "KFC",
+            "customer_name": "KFC",
+            "job_type": "internship",
+            "short_desc": "//*[@itemprop=\"description\"]"
+        }
+    },
+    {
+        "name": "Travelodge House Full UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.travelodge.co.uk/careers/vacancies/vacancy-search-results.aspx",
+            "vacancy_xc_path": "//*[@class=\"vsr-job__title\"]/a[contains(., \"Housekeeping\")][not(contains(., \"Part Time\"))]",
+            "function": "[\"\", \"facility\"]",
+            "title": "//h1[contains(@class, \"mega\")]/br/preceding-sibling::text()",
+            "company": "Travel Lodge",
+            "long_desc": "//*[@id=\"div_VacV_Description\"]",
+            "customer_name": "TravelLodge",
+            "location": "//h1[contains(@class, \"mega\")]/br/following-sibling::text()",
+            "next_page_xc_path": "//*[@class=\"paginator paginator--bottom\"]/a[contains(., \">\")]",
+            "apply_url": "//*[@class=\"form-button-container\"]//a[contains(@class, \"apply\")]",
+            "job_type": "fulltime"
+        }
+    },
+    {
+        "name": "Wetherspoons UK Floor staff",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.jdwetherspooncareers.co.uk/careercenter/vacancySearch.php?category=floor-staff&postcode=&withinMiles=30&x=22&y=19",
+            "vacancy_xc_path": "//*[@class=\"apply\"]/a",
+            "function": "[\"\", \"catering\", \"facility\"]",
+            "long_desc": "//*[@class=\"career_description\"][2]",
+            "title": "//*[@class=\"career_title applysuggest\"]/parent::div",
+            "location": "//*[@class=\"career_description\"][1]",
+            "job_type": "//tr[contains(., \"Contract type\")]/td",
+            "next_page_xc_path": "//*[@id=\"PaginationThePages\"]/a[last()]",
+            "company": "Wetherspoon",
+            "customer_name": "Wetherspoon"
+        }
+    },
+    {
+        "name": "Red Bull UK",
+        "country": "UK",
+        "config": {
+            "start_url": "http://jobs.redbull.com/uk/en-GB/results?term=student&function=&job_type=&organisation=&region=2044&country=2060&state=&city=",
+            "next_page_xc_path": "//li[contains(@class, \"current\")]/following-sibling::li[1]/a",
+            "vacancy_xc_path": "//*[@id=\"js-result\"]/ul/li/a",
+            "function": "[\"\", \"marketing\", \"promotion\"]",
+            "company": "Red Bull",
+            "long_desc": "//*[@class=\"intro-copy__description\"] | //*[@class=\"strength-list__list\"]/li/*[not(contains(@class, \"strength-list__item-label\"))] | //*[@class=\"experience-list__title\"] | //*[contains(@class, \"experience-list__list experience-list__list--\")]/li[not(contains(@class, \"experience-list__list-item experience-list__list-item--external\"))] | //h2[@class=\"apply-now-teaser__heading\"] | //h2[@class=\"apply-now-teaser__heading\"]/following-sibling::*[1]",
+            "customer_name": "Red Bull",
+            "short_desc": "//*[@class=\"intro-copy__description\"]",
+            "title": "//h1",
+            "location": "//*[@class=\"full-width-stage__locations\"]/span[1]",
+            "apply_url": "//*[@class=\"full-width-stage__button-wrapper\"]//a[contains(@class, \"apply\")]",
+            "job_type": "parttime"
+        }
+    },
+    {
+        "name": "Wetherspoons UK Kitchen staff",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.jdwetherspooncareers.co.uk/careercenter/vacancySearch.php?category=kitchen-staff&postcode=&withinMiles=30&x=22&y=19",
+            "vacancy_xc_path": "//*[@class=\"apply\"]/a",
+            "function": "[\"\", \"catering\", \"facility\"]",
+            "long_desc": "//*[@class=\"career_description\"][2]",
+            "title": "//*[@class=\"career_title applysuggest\"]/parent::div",
+            "location": "//*[@class=\"career_description\"][1]",
+            "job_type": "//tr[contains(., \"Contract type\")]/td",
+            "next_page_xc_path": "//*[@id=\"PaginationThePages\"]/a[last()]",
+            "company": "Wetherspoon",
+            "customer_name": "Wetherspoon"
+        }
+    },
+    {
+        "name": "Whitbread - Beefeater UK",
+        "country": "UK",
+        "config": {
+            "vacancy_xc_path": "//*[@class=\"job-item\"]//a",
+            "function": "[\"\", \"catering\"]",
+            "long_desc": "//*[@class=\"mobile-job-details-btns\"]/following-sibling::*",
+            "title": "//*[@class=\"job-details-header\"]",
+            "company": "Whitbread",
+            "customer_name": "Whitbread",
+            "location": "//h2[contains(., \"Location\")]/following-sibling::span",
+            "apply_url": "//div[contains(@class, \"job-details-container\")]/div[2]/a[1]",
+            "job_type": "parttime",
+            "start_url": "https://www.whitbreadcareers.com/search-and-apply/?mapview=false&feed=Beefeater&category=teammemberbarista+teammemberfrontofhouseteammember+teammembergroundfloorteammember+teammemberhousekeepingteammember+teammembermaintenanceteammember+teammembernightreceptionteammember+teammemberrestaurantkitchenteammember",
+            "short_desc": "Beefeater is one of the UK’s longest running Steakhouse and Bars. Operating for more than 40, they now have over 140 restaurants nationwide."
+        }
+    },
+    {
+        "name": "Travelodge K&B Part UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.travelodge.co.uk/careers/vacancies/vacancy-search-results.aspx",
+            "vacancy_xc_path": "//*[@class=\"vsr-job__title\"]/a[contains(., \"Kitchen and Bar\")][not(contains(., \"Full Time\"))]",
+            "function": "[\"\", \"catering\"]",
+            "title": "//h1[contains(@class, \"mega\")]/br/preceding-sibling::text()",
+            "company": "Travel Lodge",
+            "long_desc": "//*[@id=\"div_VacV_Description\"]",
+            "customer_name": "TravelLodge",
+            "location": "//h1[contains(@class, \"mega\")]/br/following-sibling::text()",
+            "next_page_xc_path": "//*[@class=\"paginator paginator--bottom\"]/a[contains(., \">\")]",
+            "apply_url": "//*[@class=\"form-button-container\"]//a[contains(@class, \"apply\")]",
+            "job_type": "parttime"
+        }
+    },
+    {
+        "name": "Primark UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://careers.primark.com/location/united-kingdom-jobs/8171/2635167/2",
+            "vacancy_xc_path": "//*[@id=\"search-results-list\"]//ul//li//a[contains(., \"Part time\") or contains(., \"Weekend\")]",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[@class=\"read-more-content\"]  | //section[contains(@class,\"description\")]//article/div[1]",
+            "title": "//head/title",
+            "job_type": "//*[@id=\"anchor-description\"]/following-sibling::section//ul/li[3] | //section[contains(@class,\"job-description\")]//ul[@class=\"separated-list\"]/li[3]",
+            "company": "Primark",
+            "customer_name": "Primark",
+            "next_page_xc_path": "//*[@id=\"pagination-bottom\"]//a[contains(@class, \"next\")]"
+        }
+    },
+    {
+        "name": "The Body Shop UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://thebodyshop.avature.net/TBScareers/SearchJobsRetail/?3_107_3=%22620932%22&3_34_3=%2217971%22",
+            "vacancy_xc_path": "//h3/a",
+            "company": "The Body Shop",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[@class=\"jobDetail clearer\"]",
+            "customer_name": "TheBodyShop",
+            "title": "/html/body/div/div[1]/div[2]/div/h1",
+            "location": "//*[@class=\"infoBulletJobDetail location\"]/p",
+            "apply_url": "//*[@class=\"buttonLike\"]",
+            "job_type": "parttime",
+            "short_desc": "//*[@id=\"wrapper\"]/div[3]/p[4]/span",
+            "next_page_xc_path": "//*[@class=\"paginationItem paginationLink\"]"
+        }
+    },
+    {
+        "name": "Tesco London UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.tesco-careers.com/search-and-apply/?nodeId=1206&type=1&page=1&location=london&radius=10",
+            "vacancy_xc_path": "//*[@class=\"job-role\"]/a",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[@class=\"job-details__row row\"]/div/p |//*[@class=\"job-details__row row\"]/div/h3[not(contains(.,\"Shift pattern\"))] | //*[@class=\"job-details__row row\"]/div/ul | //*[@class=\"job-details__row row\"]/h2",
+            "title": "//*[@class=\"job-details-hero-component__box\"]/h1",
+            "customer_name": "Tesco",
+            "apply_url": "//*[@class=\"job-details__apply-btn\"]/a",
+            "short_desc": "Work for TESCO! One of the biggest and most successful supermarkets in the UK.",
+            "next_page_xc_path": "//*[@class=\"ddl_plp_pagination\"]/span[last()]/a",
+            "company": "Tesco",
+            "location": "London"
+        }
+    },
+    {
+        "name": "Morrisons UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://apply.morrisons.jobs/vacancies/vacancy-search-results.aspx",
+            "vacancy_xc_path": "//*[@class=\"vsr-job__buttons\"]/a",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[@id=\"ctl00_ctl00_ContentContainer_mainContent_fcVacancyDetailsDescription_ITSFields\"]",
+            "title": "//h2[@class=\"vac-d__title\"]/text()",
+            "company": "Morrisons",
+            "customer_name": "Morrisons",
+            "apply_url": "//*[@class=\"button  button--stretch  apply\"]",
+            "next_page_xc_path": "//*[@id=\"ctl00_ctl00_ContentContainer_mainContent_ctl00_VacancyPager2\"]/div[2]/a[contains(.,\"Next\")]",
+            "location": "//span[contains(@id, \"LocationID\")]"
+        }
+    },
+    {
+        "name": "Travelodge House Part UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.travelodge.co.uk/careers/vacancies/vacancy-search-results.aspx",
+            "vacancy_xc_path": "//*[@class=\"vsr-job__title\"]/a[contains(., \"Housekeeping\")][not(contains(., \"Full Time\"))]",
+            "function": "[\"\", \"facility\"]",
+            "title": "//h1[contains(@class, \"mega\")]/br/preceding-sibling::text()",
+            "company": "Travel Lodge",
+            "long_desc": "//*[@id=\"div_VacV_Description\"]",
+            "customer_name": "TravelLodge",
+            "location": "//h1[contains(@class, \"mega\")]/br/following-sibling::text()",
+            "next_page_xc_path": "//*[@class=\"paginator paginator--bottom\"]/a[contains(., \">\")]",
+            "apply_url": "//*[@class=\"form-button-container\"]//a[contains(@class, \"apply\")]",
+            "job_type": "parttime"
+        }
+    },
+    {
+        "name": "Inditex UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.inditexcareers.com/portalweb/en/openings-employment?ns=1&area=539005&country=541473",
+            "vacancy_xc_path": "//*[@class=\"tabla_normal\"]/tbody/tr//span[contains(., \"SALES ASSISTANT\")]/parent::a",
+            "function": "[\"\", \"retail\"]",
+            "title": "//div[@class=\"columns-titleOffers\"]/p[1]",
+            "company": "Inditex",
+            "long_desc": "//div[@class=\"columns-left\"]/div[1]/p[1]/following-sibling::*",
+            "customer_name": "Inditex",
+            "location": "translate(//div[@class=\"columns-titleOffers\"]/p[2], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')",
+            "job_type": "parttime",
+            "next_page_xc_path": "//*[@class=\"portlet-content\"]/div/div/div[2]/div[2]/div[last()]"
+        }
+    },
+    {
+        "name": "Lidl UK",
+        "country": "UK",
+        "config": {
+            "start_url": "http://careers.lidl.co.uk/cps/rde/SID-9A6350E0-47523FC1/career_lidl_uk/hs.xsl/jobsearch.htm?searchquery=&phraseSearch=&lat=&lon=&locname=&contracttypeid=Part-time&contracttypeid=Night+shift&hitsperchunk=400",
+            "vacancy_xc_path": "//*[@id=\"jobsearch\"]/section[3]/div[2]/section/div/article/div[2]/a",
+            "function": "[\"\", \"retail\"]",
+            "title": "//*[@id=\"content\"]/section[1]/div/div[1]/div/h1",
+            "long_desc": "//*[@id=\"content\"]/section[2]/div/div[1]/div/p[2] | //*[@class=\"vacancy-features\"]",
+            "customer_name": "Lidl",
+            "apply_url": "//*[@id=\"content\"]/section[1]/div/div[2]/div/a",
+            "location": "substring-after(//*[@id=\"content\"]/section[1]/div/div[1]/div/ul/li[3], \",\")",
+            "next_page_xc_path": "//*[@id=\"jobsearch\"]/section[3]/div[2]/section/div/nav/ul/li[8]/a"
+        }
+    },
+    {
+        "name": "Greggs UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.greggsfamily.co.uk/search/?q=&q2=&locationsearch=&title=team+member&location=&date=",
+            "vacancy_xc_path": "//*[@class=\"jobTitle-link\"]",
+            "function": "[\"\", \"retail\"]",
+            "next_page_xc_path": "//*[@class=\"pagination-top clearfix\"]//li[@class=\"active\"]/following-sibling::li[1]/a",
+            "title": "//*[@id=\"job-title\"]",
+            "company": "Greggs",
+            "long_desc": "//*[@class=\"job\"]",
+            "customer_name": "Greggs",
+            "location": "//*[@class=\"jobGeoLocation\"]",
+            "job_type": "parttime"
+        }
+    },
+    {
+        "name": "Whitbread - Bar&Block UK",
+        "country": "UK",
+        "config": {
+            "vacancy_xc_path": "//*[@class=\"job-item\"]//a",
+            "function": "[\"\", \"catering\"]",
+            "long_desc": "//*[@class=\"mobile-job-details-btns\"]/following-sibling::*",
+            "title": "//*[@class=\"job-details-header\"]",
+            "company": "Whitbread",
+            "customer_name": "Whitbread",
+            "location": "//h2[contains(., \"Location\")]/following-sibling::span",
+            "apply_url": "//div[contains(@class, \"job-details-container\")]/div[2]/a[1]",
+            "job_type": "parttime",
+            "start_url": "https://www.whitbreadcareers.com/search-and-apply/?mapview=false&feed=BarBlock&category=teammemberbarista+teammemberfrontofhouseteammember+teammembergroundfloorteammember+teammemberhousekeepingteammember+teammembermaintenanceteammember+teammembernightreceptionteammember+teammemberrestaurantkitchenteammember",
+            "short_desc": "Bar and Block is a Steakhouse and Bar operating across the whole of the UK."
+        }
+    },
+    {
+        "name": "Dixons Carphone UK",
+        "country": "UK",
+        "config": {
+            "vacancy_xc_path": "//a[@class=\"job-result\"]",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//hr/following-sibling::*[not(contains(@class, \"job-apply\"))]",
+            "customer_name": "DixonsCarphone",
+            "title": "//h3",
+            "apply_url": "/html/body/div[1]/div/div[3]/a",
+            "next_page_xc_path": "//*[@id=\"job-search-pagination\"]/span[contains(., \"next\")]",
+            "start_url": "https://careers.dixonscarphone.com/search-and-apply?jobsearch=true&country=United+Kingdom&county=&keyword=SALES+COLLEAGUE&contractHours=Part+Time&contractType=&sector=Retail&page=0",
+            "company": "Dixons Carphone",
+            "location": "substring-after(//p[contains(., \"Location\")], \", \")",
+            "job_type": "parttime",
+            "short_desc": "Work at Carphone Warehouse, the UK's biggest phone retailer!"
+        }
+    },
+    {
+        "name": "Hilton UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://jobs.hilton.com/search/?keywords=notselected&location=notselected&brand=notselected&areasOfTalent=notselected&Page=6&EmployeeType=jtpt&sortBy=notselected&radius=notselected&perPage=10&resultsLanguage=en&region=notselected&searchcountry=UK&searchgroup=notselected",
+            "vacancy_xc_path": "//*[@id=\"searchResultsContainer\"]/a",
+            "company": "Hilton",
+            "function": "[\"\"]",
+            "customer_name": "Hilton",
+            "title": "//*[@id=\"mobileJump\"]/div[1]/div[1]/div[1]/h1",
+            "short_desc": "//*[@class=\"jobDescription_p1 p_margin\"]/p[1]",
+            "long_desc": "//*[@class=\"jobDescription_p1 p_margin\"]",
+            "apply_url": "//*[@id=\"mobileJump\"]/div[1]/div[2]/a[1]",
+            "location": "//*[@id=\"mobileJump\"]/div[1]/div[3]/div[2]/div[9]/a/text()[3]"
+        }
+    },
+    {
+        "name": "M&S UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://jobs.marksandspencer.com/category/in-store-salesfloor-jobs/1729-7610-8944/33460/1",
+            "vacancy_xc_path": "//*[@class=\"instoresalesfloor\"]//a",
+            "function": "[\"\", \"retail\"]",
+            "next_page_xc_path": "//*[@class=\"next\"]",
+            "long_desc": "//*[@class=\"ats-description\"]",
+            "title": "//h1",
+            "location": "//*[@class=\"job-id job-info\"]/b[contains(.,\"Location:\")]/parent::*/text()",
+            "company": "marksandspencer",
+            "customer_name": "marksandspencer",
+            "job_type": "parttime"
+        }
+    },
+    {
+        "name": "Whitbread - TableTable UK",
+        "country": "UK",
+        "config": {
+            "vacancy_xc_path": "//*[@class=\"job-item\"]//a",
+            "function": "[\"\", \"catering\"]",
+            "long_desc": "//*[@class=\"mobile-job-details-btns\"]/following-sibling::*",
+            "title": "//*[@class=\"job-details-header\"]",
+            "company": "Whitbread",
+            "customer_name": "Whitbread",
+            "location": "//h2[contains(., \"Location\")]/following-sibling::span",
+            "apply_url": "//div[contains(@class, \"job-details-container\")]/div[2]/a[1]",
+            "job_type": "parttime",
+            "start_url": "https://www.whitbreadcareers.com/search-and-apply/?mapview=false&feed=TableTable&category=teammemberbarista+teammemberfrontofhouseteammember+teammembergroundfloorteammember+teammemberhousekeepingteammember+teammembermaintenanceteammember+teammembernightreceptionteammember+teammemberrestaurantkitchenteammember",
+            "short_desc": "Table Table is a brand of restaurants serving traditional food nationwide in the UK."
+        }
+    },
+    {
+        "name": "Thomas Cook UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://careers.thomascook.com/go/UKI/1286501/?q=&q2=&locationsearch=&title=&location=GB&shifttype=&facility=&department=",
+            "vacancy_xc_path": "//*[@class=\"jobTitle-link\"]",
+            "function": "[\"\"]",
+            "next_page_xc_path": "//a[contains(@title,\"Page\")]",
+            "long_desc": "//*[@itemprop=\"description\"]",
+            "title": "//*[@itemprop=\"title\"]",
+            "customer_name": "Thomas Cook"
+        }
+    },
+    {
+        "name": "Travelodge Recep Full UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.travelodge.co.uk/careers/vacancies/vacancy-search-results.aspx",
+            "vacancy_xc_path": "//*[@class=\"vsr-job__title\"]/a[contains(., \"Receptionist\")][not(contains(., \"Part Time\"))]",
+            "function": "[\"\", \"reception\"]",
+            "title": "//h1[contains(@class, \"mega\")]/br/preceding-sibling::text()",
+            "company": "Travel Lodge",
+            "long_desc": "//*[@id=\"div_VacV_Description\"]",
+            "customer_name": "TravelLodge",
+            "location": "//h1[contains(@class, \"mega\")]/br/following-sibling::text()",
+            "next_page_xc_path": "//*[@class=\"paginator paginator--bottom\"]/a[contains(., \">\")]",
+            "apply_url": "//*[@class=\"form-button-container\"]//a[contains(@class, \"apply\")]",
+            "job_type": "fulltime"
+        }
+    },
+    {
+        "name": "Greene King UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://jobs.greeneking.co.uk/category/apprenticeships-jobs/1659-1660/20415/1",
+            "vacancy_xc_path": "//*[@id=\"search-results\"]//a",
+            "function": "[\"\", \"catering\"]",
+            "long_desc": "//*[@class=\"job-description\"]/div/node()[not(contains(@class,\"job-info\"))]",
+            "title": "//*[@class=\"title\"]",
+            "next_page_xc_path": "//*[@class=\"next\"]",
+            "location": "//*[@class=\"location-wrapper\"]/span[last()]",
+            "company": "GreeneKing",
+            "customer_name": "GreeneKing",
+            "apply_url": "//*[@class=\"job-details-corner-wrapper\"]/section/div/a",
+            "job_type": "internship"
+        }
+    },
+    {
+        "name": "Asda UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.asda.jobs/search-results/?keyword=store&loc=&Radius=5&lat=&lon=&Function=Store+Colleague&PositionType=&WorkLocation=&SortBy=&alternateSearch=true",
+            "vacancy_xc_path": "//*[contains(@class, \"accordion-header\")][not(contains(., \"Seasonal\"))]/following-sibling::div//a[contains(@class, \"view-jobs-button\")][1]",
+            "function": "[\"\", \"retail\"]",
+            "title": "//h4",
+            "company": "Asda",
+            "long_desc": "//*[@class=\"row job-content\"]",
+            "customer_name": "Asda",
+            "location": "translate(//*[@class=\"job-property\"]//p[contains(., \"Location\")]/following-sibling::p[1], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')",
+            "apply_url": "//*[@class=\"row job-content\"]/following-sibling::div[1]//a",
+            "job_type": "fulltime"
+        }
+    },
+    {
+        "name": "Nike UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://jobs.nike.com/search-jobs?alcpm=2635167",
+            "vacancy_xc_path": "//*[@id=\"search-results-list\"]/ul/li/a/h2[contains(.,\"Part Time\")]/parent::a",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[@class=\"ats-description\"] | //*[@class=\"keyword-text\"]",
+            "title": "//h1[@itemprop=\"title\"]",
+            "apply_url": "//*[@class=\"button job-apply top\"]",
+            "job_type": "parttime",
+            "first_click_ons": "//*[@class=\"pagination-show-all\"]",
+            "company": "Nike",
+            "customer_name": "Nike",
+            "location": "//*[@class=\"job-location\"]",
+            "next_page_xc_path": "//*[@id=\"pagination-bottom\"]/div[2]/a[2]"
+        }
+    },
+    {
+        "name": "Enterprise UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://careers.enterprise.co.uk/category/internship-jobs/24824/1023/1",
+            "next_page_xc_path": "//*[@id=\"pagination-bottom\"]/div[contains(@class, \"next\")]/a",
+            "vacancy_xc_path": "//*[@id=\"search-results-list\"]/ul/li/a",
+            "function": "[\"\", \"management\"]",
+            "long_desc": "//*[@class=\"ats-description\"]",
+            "title": "//*[@class=\"job-description\"]//h1",
+            "location": "substring-before(//*[@class=\"job-info\"], \",\")",
+            "company": "Enterprise",
+            "customer_name": "Enterprise",
+            "apply_url": "//*[@class=\"job-description\"]//h1/following-sibling::div[contains(@class, \"jd-buttons-wrap jd-buttons-wrap--top\")][1]/a",
+            "job_type": "internship"
+        }
+    },
+    {
+        "name": "Halfords UK",
+        "country": "UK",
+        "config": {
+            "start_url": "http://careers.halfordscareers.com/cw/en/search/?category=retail+colleagues&search-keyword=&job-mail-subscribe-privacy=agree&page=2&page-items=126",
+            "vacancy_xc_path": "//*[@class=\"job-link\"]",
+            "function": "[\"\", \"retail\"]",
+            "title": "//*[@id=\"job-content\"]/h2",
+            "long_desc": "//*[@id=\"job-details\"]",
+            "company": "Halfords",
+            "customer_name": "Halfords",
+            "location": "//*[@id=\"job-content\"]//span[@class=\"location\"]",
+            "job_type": "//*[contains(@class, \"work-type\")]",
+            "apply_url": "//*[@id=\"job-details\"]/following-sibling::p/a[1]"
+        }
+    },
+    {
+        "name": "Travelodge K&B Full UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.travelodge.co.uk/careers/vacancies/vacancy-search-results.aspx",
+            "vacancy_xc_path": "//*[@class=\"vsr-job__title\"]/a[contains(., \"Kitchen and Bar\")][not(contains(., \"Part Time\"))]",
+            "function": "[\"\", \"customer_service\", \"reception\"]",
+            "title": "//h1[contains(@class, \"mega\")]/br/preceding-sibling::text()",
+            "company": "Travel Lodge",
+            "long_desc": "//*[@id=\"div_VacV_Description\"]",
+            "customer_name": "TravelLodge",
+            "location": "//h1[contains(@class, \"mega\")]/br/following-sibling::text()",
+            "next_page_xc_path": "//*[@class=\"paginator paginator--bottom\"]/a[contains(., \">\")]",
+            "apply_url": "//*[@class=\"form-button-container\"]//a[contains(@class, \"apply\")]",
+            "job_type": "fulltime"
+        }
+    },
+    {
+        "name": "Superdrug Trainee UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.superdrug.jobs/jobs/?jobTitle=Apprenticeship&jobLocation=&latitude=&longitude=&radius=&department=Retail%20Stores&hours=&contract=&jobType=Apprenticeships",
+            "vacancy_xc_path": "//*[@class=\"job-results__wrapper\"]//a[contains(@class, \"job-results__item\")][contains(., \"Apprentice\")]",
+            "function": "[\"\", \"customer_service\", \"retail\"]",
+            "next_page_xc_path": "//*[@class=\"pagination\"]//li[contains(@class, \"pagination__active\")]/following-sibling::li[1]/a",
+            "long_desc": "//*[@class=\"row main-content\"]",
+            "title": "//h1",
+            "company": "Superdrug",
+            "customer_name": "Superdrug",
+            "apply_url": "//a[@class=\"apply-link desktop-only\"]",
+            "job_type": "traineeship"
+        }
+    },
+    {
+        "name": "Royal Mail UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://jobs.royalmailgroup.com/search/?q=&title=postman&sortColumn=referencedate&sortDirection=desc",
+            "next_page_xc_path": "//*[@class=\"pagination-bottom\"]//li[contains(@class, \"active\")]/following-sibling::li[1]/a",
+            "vacancy_xc_path": "//tbody/tr[contains(., \"Postman\")]//a",
+            "function": "[\"\", \"logistics\"]",
+            "long_desc": "//*[@class=\"jobTitle\"]/following-sibling::*[not(contains(@class, \"applylink\") or contains(., \"#job-location\"))]",
+            "title": "//*[@class=\"jobDisplay\"]//h1",
+            "company": "Royal Mail",
+            "customer_name": "RoyalMail",
+            "short_desc": "We're a universal postal service to more than 29 million addresses across the UK – from birthday presents to exam results. This means you’ll make a difference to people’s lives, every day.",
+            "job_type": "parttime",
+            "location": "//*[@id=\"job-location\"]/span"
+        }
+    },
+    {
+        "name": "River Island UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://isw.changeworknow.co.uk/riverisland/vms/e/stores/search/new",
+            "vacancy_xc_path": "//*[@class=\"panel-title\"]/a",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//*[@class=\"job-title\"]/following-sibling::div",
+            "title": "//*[@class=\"job-title\"]",
+            "company": "River Island",
+            "customer_name": "RiverIsland",
+            "location": "London",
+            "apply_url": "//a[contains(text(), \"Apply now\")]",
+            "job_type": "parttime",
+            "next_page_xc_path": "//div[@class=\"panel-body\"]/div[last()]//a[@rel=\"next\"][1]"
+        }
+    },
+    {
+        "name": "Pets at Home - Internships UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.petsathomejobs.com/search-jobs-and-apply?action=jobSearch&area=6&roleType=&region=&keyword=#jobsTop",
+            "vacancy_xc_path": "//*[@class=\"job-box\"]/a",
+            "function": "[\"\", \"customer_service\"]",
+            "long_desc": "//*[@itemprop=\"description\"]",
+            "title": "//*[@itemprop=\"title\"]",
+            "location": "//*[@itemprop=\"addressLocality\"] | //*[@itemprop=\"addressLocality\"]/following-sibling::text()[1] | //*[@itemprop=\"addressRegion\"]",
+            "company": "Pets at Home",
+            "customer_name": "Pets at Home",
+            "next_page_xc_path": "//*[@data-js=\"jobs-filters\"]/a",
+            "short_desc": "The Groom Room at Pets at Home is looking for Apprentice Groomers to join our quickly expending Groom Room business.",
+            "job_type": "internship"
+        }
+    },
+    {
+        "name": "Domino's Drivers UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://isw.changeworknow.co.uk/dominos/vms/e/stores/search/edit",
+            "vacancy_xc_path": "//*[@class=\"col-md-8 position-search-results\"]//*[@class=\"panel-body\"]/*[@class=\"position_opening\"]//*[@class=\"panel-heading\"]//*[@class=\"panel-title\"]/a[contains(., \"Delivery\") or contains(., \"Driver\")]",
+            "function": "[\"\", \"logistics\"]",
+            "next_page_xc_path": "//*[@class=\"col-md-8 position-search-results\"]//*[@class=\"panel-body\"]/div[last()]//a[last()]",
+            "title": "//*[@id=\"wrapper\"]/*[@id=\"position_display\"]/*[@class=\"panel panel-default\"]/*[@class=\"panel-body\"]/*[@class=\"job-title\"]",
+            "long_desc": "//*[@class=\"job-title\"]/following-sibling::div/p | //*[@class=\"job-title\"]/following-sibling::div/ul",
+            "location": "//*[@id=\"wrapper\"]//*[@id=\"position-info-box\"]//div[@id=\"job-cat-1\"]//div[@class=\"panel-body\"]//p[1]/text()",
+            "company": "Dominos",
+            "customer_name": "Dominos",
+            "apply_url": "//*[@id=\"wrapper\"]//div[@id=\"position_display\"]/*[@class=\"panel panel-default\"]/*[@class=\"panel-body\"]/a[contains(@class, \"btn btn-primary pull-right\")]",
+            "job_type": "parttime"
+        }
+    },
+    {
+        "name": "McDonalds Internships UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.lifetimetraining.co.uk/apprenticeship-vacancies/mcdonalds/#page-1",
+            "vacancy_xc_path": "//*[@id=\"JobResults\"]//h4/a",
+            "function": "[\"\", \"catering\"]",
+            "long_desc": "//*[@class=\"job-accordion\"]",
+            "title": "//*[@itemprop=\"title\"]",
+            "next_page_xc_path": "//*[@id=\"page-nav-bottom\"]/ul/li[last()]/a",
+            "location": "substring-after(//*[contains(@itemprop, \"name\")], \"-\")",
+            "company": "McDonalds",
+            "customer_name": "McDonalds",
+            "apply_url": "//*[@class=\"details-box clearfix\"]/div/a",
+            "job_type": "internship",
+            "short_desc": "The McDonald’s apprenticeship will build your confidence and develop your life skills whilst preparing you to progress in our business."
+        }
+    },
+    {
+        "name": "Pets at Home - Full-Time UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.petsathomejobs.com/search-jobs-and-apply",
+            "vacancy_xc_path": "//*[@class=\"jobGrid\"]//div[not(contains(., \"Apprenticeship\"))]/p[contains(., \"Full-Time\")]/parent::div//a",
+            "function": "[\"\", \"customer_service\"]",
+            "long_desc": "//*[@itemprop=\"description\"]",
+            "title": "//*[@itemprop=\"title\"]",
+            "location": "//*[@itemprop=\"addressLocality\"] | //*[@itemprop=\"addressLocality\"]/following-sibling::text()[1] | //*[@itemprop=\"addressRegion\"]",
+            "company": "Pets at Home",
+            "customer_name": "Pets at Home",
+            "next_page_xc_path": "//*[@data-js=\"jobs-filters\"]/a",
+            "short_desc": "The Groom Room at Pets at Home is looking for Apprentice Groomers to join our quickly expending Groom Room business.",
+            "job_type": "fulltime"
+        }
+    },
+    {
+        "name": "Co-op UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://jobs.coop.co.uk/search-jobs?fl=2635167#",
+            "vacancy_xc_path": "//h3[contains(., \"Customer Team Member\")]/parent::div/parent::a",
+            "function": "[\"\", \"retail\"]",
+            "long_desc": "//h2[contains(., \"Job Description\")] | //div[@class=\"ats-description\"]",
+            "title": "//*[@class=\"job-description-title\"]/h1",
+            "location": "//*[@class=\"job-description-title\"]/h3",
+            "next_page_xc_path": "//*[@class=\"pagination-paging\"]/div[contains(@class, \"btn--next\")]//a",
+            "company": "Co-op",
+            "customer_name": "Co-op",
+            "apply_url": "//*[@class=\"location-callout--wrapper\"]/following-sibling::a[contains(@class, \"job-apply\")]",
+            "job_type": "parttime",
+            "short_desc": "From career progression and working within your local community to a whole range of financial discounts and benefits. Working at the Co-op isn't your standard retail job."
+        }
+    },
+    {
+        "name": "Asda Seasonal UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.asda.jobs/search-results/?keyword=store&loc=&Radius=5&lat=&lon=&Function=&PositionType=Seasonal&WorkLocation=&SortBy=&alternateSearch=true",
+            "vacancy_xc_path": "//*[contains(@class, \"accordion-header\")]/following-sibling::div//a[contains(@class, \"view-jobs-button\")][1]",
+            "function": "[\"\", \"retail\"]",
+            "title": "//h4",
+            "company": "Asda",
+            "long_desc": "//*[@class=\"row job-content\"]",
+            "customer_name": "Asda",
+            "location": "translate(//*[@class=\"job-property\"]//p[contains(., \"Location\")]/following-sibling::p[1], 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')",
+            "apply_url": "//*[@class=\"row job-content\"]/following-sibling::div[1]//a",
+            "job_type": "holiday"
+        }
+    },
+    {
+        "name": "Sainsbury Driver UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://sainsburys.jobs/search-apply/?role_type=Drivers+%26+Cyclists&hours=Part-time|Full-time",
+            "next_page_xc_path": "//*[@class=\"result-pagination\"]/a[contains(., \"Next\")]",
+            "vacancy_xc_path": "//*[@class=\"vacancies-listings\"]//a[@class=\"heading\"][not(contains(., \"Manager\"))][contains(@href, \"sainsbury\")]",
+            "function": "[\"\", \"logistics\"]",
+            "long_desc": "//*[@class=\"job-info\"]//*[@class=\"info1\"] | //*[@class=\"single-content-text job-description\"]",
+            "title": "//h1",
+            "job_type": "substring-before(substring-after(//*[@class=\"info1\"], \"Hours\"), \"Contract\")",
+            "company": "Sainsburys",
+            "customer_name": "Sainsburys",
+            "location": "substring-before(substring-after(//*[@class=\"info1\"], \"Location\"), \"Hours\")",
+            "apply_url": "//*[@class=\"content-inner\"]//a[contains(., \"Apply\")]",
+            "short_desc": "Our vision is to be the most trusted retailer, where people love to work and shop. That means harnessing the talent, creativity and diversity of our colleagues to ensure that customers receive great service."
+        }
+    },
+    {
+        "name": "Travelodge Recep part UK",
+        "country": "UK",
+        "config": {
+            "start_url": "https://www.travelodge.co.uk/careers/vacancies/vacancy-search-results.aspx",
+            "vacancy_xc_path": "//*[@class=\"vsr-job__title\"]/a[contains(., \"Receptionist\")][not(contains(., \"Full Time\"))]",
+            "function": "[\"\", \"reception\"]",
+            "title": "//h1[contains(@class, \"mega\")]/br/preceding-sibling::text()",
+            "company": "Travel Lodge",
+            "long_desc": "//*[@id=\"div_VacV_Description\"]",
+            "customer_name": "TravelLodge",
+            "location": "//h1[contains(@class, \"mega\")]/br/following-sibling::text()",
+            "next_page_xc_path": "//*[@class=\"paginator paginator--bottom\"]/a[contains(., \">\")]",
+            "apply_url": "//*[@class=\"form-button-container\"]//a[contains(@class, \"apply\")]",
+            "job_type": "parttime"
+        }
+    }
+]
