@@ -3,6 +3,7 @@ services:
   workers:
     build: .
     container_name: workers_app
+    restart: on-failure
     volumes:
       - .:/workers
     ports:
