@@ -21,25 +21,53 @@ output: free? yes/no, response from worker
 api = Namespace('orchestrator', description='i orchestrate stuff')
 
 #parser.add_argument('name', type=int, location='form')
+# workers = api.model('Event', {
+#     'type': fields.String(required=True),
+#     'workers': fields.List(fields.Nested(config))
+# })
+
+event = api.model('Event', {
+    'type': fields.String(required=True, example="singleton"),
+    'name': fields.String(required=True, example="test"),
+    'workers': fields.List(fields.String(example="selenium"))
+})
 
 config = api.model('Config', {
-    'id': fields.Integer,
-    'country': fields.String,
-    'company_name': fields.String,
-    'event': fields.String,
-    'link': fields.String,
-    'config': fields.Nested,
+    'fieldname': fields.String(required=True, example="website"),
+    'type': fields.String(required=True, example="url"),
+    'input': fields.String(required=True, example="https://google.nl"),
+    'method': fields.String(required=True, example="url")
+})
+
+payload = api.model('Payload', {
+    'id': fields.Integer(required=True),
+    'event': fields.Nested(event),
+    'config': fields.Nested(config),
 })
 
 
-@api.route('/')
+
+parser = api.parser()
+parser.add_argument(
+    'post body',
+    type=dict,
+    location='json',
+    help='post body JSON',
+    required=True
+)
+
+#@api.doc(parser=parser)
+@api.doc(model=payload)
+@api.route('/', methods=["POST"])
 class OrchestratorAPI(Resource):
-    @api.expect(model=config)
-    #@api.doc(model=config)
+    @api.expect(payload)
+
     def post(self):
         message = request.get_json(force=True)
+        print(message)
         if message != None:
             response = RequestWorkers().request_workers(message)
+
         return jsonify({'response': response['response_orchestrator']})
 
 

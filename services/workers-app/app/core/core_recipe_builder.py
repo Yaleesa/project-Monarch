@@ -3,9 +3,9 @@ from flask import Flask, jsonify, abort, request, make_response, url_for
 from flask import current_app as app
 
 class RecipeBuilder:
-    def __init__(self, event, module):
+    def __init__(self, event):
         self.id = random.randint(0,100)
-        self.event = {'type': event, 'workers': ['selenium'], 'module': module}
+        self.event = event
         self.template = {'id': self.id, 'event': self.event, 'recipes': []}
 
     def add_recipe_group(self, group_id):
@@ -44,4 +44,10 @@ class RecipeBuilder:
         #     else:
         self.event['recipes'].append(self.add_ingredient('xpath', 'text', 'title', combined['config']['title']))
         self.event['recipes'].append(self.add_ingredient('source', 'source', 'source', 'source'))
+        return self.template
+
+    def config_to_recipe(self, config):
+        app.logger.info(config['config'])
+        config = config['config']
+        self.template['recipes'].append(self.add_ingredient(method=config['method'], type=config['type'], fieldname=config['fieldname'], input=config['input']))
         return self.template

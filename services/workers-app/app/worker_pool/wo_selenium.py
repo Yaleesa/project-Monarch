@@ -49,10 +49,12 @@ class SeleniumTaskLibrary():
 
     def url(self, data):
         result = self.driver.get(data['input'])
-        return {"root_url": self.driver.current_url}
+        response = {"requested_url": data['input']}
+        response.update(self.info(data))
+        return response
 
     def info(self, data):
-        return {"info":{"title": self.driver.title, "url":self.driver.current_url}}
+        return {"info":{"title": self.driver.title, "current_url":self.driver.current_url}}
 
     def source(self, data):
         return {"source": self.driver.page_source}
@@ -186,7 +188,7 @@ class SeleniumGroupTasksLibrary:
 
 
 def SeleniumTaskHandler(message):
-    module = message['event']['module']
+    type = message['event']['type']
     name = message['event']['name']
     recipes = message['recipes']
     results = "yolo"
@@ -194,14 +196,14 @@ def SeleniumTaskHandler(message):
         with SeleniumWorkerSession() as browser:
             Group = SeleniumGroupTasksLibrary(browser)
             browser.implicitly_wait(5)
-            if module == 'actionchain':
+            if type == 'actionchain':
                 results = [getattr(Group, recipe['group_id'])(recipe['ingredients']) for recipe in recipes]
                 results[0]['data'].update({'name':name})
                 results = results[0]['data']
 
-            elif module == 'singleton':
+            elif type == 'singleton':
                 Task = SeleniumTaskLibrary(browser)
-                results = [getattr(Task, ingredient['method'])(ingredient['data']) for ingredient in recipes]
+                results = [getattr(Task, ingredient['method'])(ingredient) for ingredient in recipes]
                     ## Iets voor result bedenken wat het zijn nu losse dicts in lijst. dict comprehension mebe
     except Exception as err:
         app.logger.error(err, exc_info=True)

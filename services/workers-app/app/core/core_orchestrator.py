@@ -40,7 +40,6 @@ class RequestWorkers:
         try:
             for worker in message['event']['workers']:
                 app.logger.info('Requested: ' + worker)
-                print(self.availability_list)
                 if self.availability_list['workers'][worker]['ready']:
                     app.logger.info(f'{worker} is ready!')
                     response = self.assign_requests(worker, message)
@@ -75,9 +74,13 @@ class RequestWorkers:
 class SeleniumGateKeeper:
     def run(self, message):
         try:
-            recipe = RecipeBuilder(event=message['event'], module=message['module']).config_to_recipe_links(message)
+            if message['event']['name'] == 'config_tester':
+                recipe = RecipeBuilder(event=message['event']).config_to_recipe_links(message)
+            else:
+                recipe = RecipeBuilder(event=message['event']).config_to_recipe(message)
         except Exception as err:
-            app.logger.error(err)
+            app.logger.error(err, exc_info=True)
+            #recipe = message
         response = SeleniumTaskHandler(recipe)
         return response['response_selenium']
 

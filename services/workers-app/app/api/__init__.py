@@ -1,7 +1,7 @@
 from flask_restplus import Api
 
 api = Api(
-    title='Colony of WorkerBees API',
+    title='The Colony API',
     version='1.0',
     description='Various types of workers are ready for you to use',
     # All API metadatas
