@@ -97,7 +97,9 @@ class SeleniumTaskLibrary():
         #elements_by
         pass
 
-    def wait(self, sec):
+    def wait(self, data):
+        sec = int(data['input'])
+        time.sleep(sec) ## hacky for demo
         self.driver.implicitly_wait(sec)
         return {'wait': f'Waited {sec} seconds'}
 

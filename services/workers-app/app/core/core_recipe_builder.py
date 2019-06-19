@@ -48,6 +48,8 @@ class RecipeBuilder:
 
     def config_to_recipe(self, config):
         app.logger.info(config['config'])
-        config = config['config']
-        self.template['recipes'].append(self.add_ingredient(method=config['method'], type=config['type'], fieldname=config['fieldname'], input=config['input']))
+        for action in config['config']:
+            app.logger.info(action)
+
+            self.template['recipes'].append(self.add_ingredient(method=action['method'], type=action['type'], fieldname=action['fieldname'], input=action['input']))
         return self.template

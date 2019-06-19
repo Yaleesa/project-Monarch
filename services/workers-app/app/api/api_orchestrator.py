@@ -42,7 +42,7 @@ config = api.model('Config', {
 payload = api.model('Payload', {
     'id': fields.Integer(required=True),
     'event': fields.Nested(event),
-    'config': fields.Nested(config),
+    'config': fields.List(fields.Nested(config)),
 })
 
 
