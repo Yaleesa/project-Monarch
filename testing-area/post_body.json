@@ -1,0 +1,31 @@
+{
+  "id": 0,
+  "event": {
+    "type": "singleton",
+    "name": "test",
+    "workers": [
+      "selenium"
+    ]
+  },
+  "config": [
+    {
+      "fieldname": "website",
+      "type": "url",
+      "input": "https://youngcapital.nl",
+      "method": "url"
+    },
+    {
+      "fieldname": "sleepy",
+      "type": "int",
+      "input": "5",
+      "method": "wait"
+    },
+    {
+      "fieldname": "button",
+      "type": "xpath",
+      "input": "//button[@type='submit']",
+      "method": "click"
+    }
+
+  ]
+}

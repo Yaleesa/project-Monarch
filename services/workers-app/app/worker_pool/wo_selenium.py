@@ -77,10 +77,10 @@ class SeleniumTaskLibrary():
                 response = {"exception": "xpath type not defined"}
 
         except WebDriverException as err:
-            app.logger.error(err)
+            app.logger.error(err, exc_info=True)
             response = {"exception":str(err)}
         except Exception as err:
-            app.logger.error(err)
+            app.logger.error(err, exc_info=True)
             response = {"exception":str(err)}
 
         return response
@@ -98,7 +98,11 @@ class SeleniumTaskLibrary():
         pass
 
     def wait(self, data):
-        sec = int(data['input'])
+        if isinstance(data, int) == False:
+            print("uoo")
+            sec = data['input']
+        else:
+            sec = data
         time.sleep(sec) ## hacky for demo
         self.driver.implicitly_wait(sec)
         return {'wait': f'Waited {sec} seconds'}
@@ -106,7 +110,13 @@ class SeleniumTaskLibrary():
     def pagination(self, data):
         button = self.driver.find_elements_by_xpath(data['input'])
         button[0].click()
-        self.wait(5)
+        time.sleep(2)
+        return {"response": f"current url: {self.driver.current_url}"}
+
+    def click(self, data):
+        button = self.driver.find_elements_by_xpath(data['input'])
+        button[0].click()
+        time.sleep(2)
         return {"response": f"current url: {self.driver.current_url}"}
 
     def cookie(self, cookie):
@@ -150,7 +160,9 @@ class SeleniumGroupTasksLibrary:
 
             self.Task.url(starting_page)
             for page in range(pages):
+                app.logger.info(links_path)
                 get_links = self.Task.xpath(links_path)
+                app.logger.info(get_links)
                 if any(print(elem) in all_links for elem in get_links['urls']):
                     #print(f"all_links: {all_links}") # testing
                     #print(f"get_links: {get_links}") # testing
@@ -172,7 +184,7 @@ class SeleniumGroupTasksLibrary:
                         break
 
                     except ElementClickInterceptedException as err:
-                        app.logger.error(err)
+                        app.logger.error(err, exc_info=True)
                         break
                 else:
                     break
