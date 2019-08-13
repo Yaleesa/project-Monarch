@@ -11,20 +11,20 @@
     {
       "fieldname": "website",
       "type": "url",
-      "input": "https://youngcapital.nl",
+      "input": "https://verbund.edeka/karriere/stellenb%C3%B6rse/#/?levels=27411,27412,27413&contractTypes=1045",
       "method": "url"
     },
     {
       "fieldname": "sleepy",
       "type": "int",
-      "input": "5",
+      "input": 5,
       "method": "wait"
     },
     {
-      "fieldname": "button",
+      "fieldname": "pagination",
       "type": "xpath",
-      "input": "//button[@type='submit']",
-      "method": "click"
+      "input": "//*[@class='o-job-board__paging-l']/button[last()]",
+      "method": "pagination"
     }
 
   ]

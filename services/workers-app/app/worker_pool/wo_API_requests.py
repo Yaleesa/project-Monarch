@@ -1,7 +1,3 @@
-
-
-#### https://rewe-group.jobs/api/jobs/search?employmentLevelId=G
-
 import requests
 from bs4 import BeautifulSoup
 from lxml.html import parse, etree
@@ -11,8 +7,6 @@ from flask import current_app as app
 
 
 user_header = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
-
-
 
 class APIRequester:
     def __init__(self):

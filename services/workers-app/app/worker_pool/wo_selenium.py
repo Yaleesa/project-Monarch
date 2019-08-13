@@ -108,10 +108,14 @@ class SeleniumTaskLibrary():
         return {'wait': f'Waited {sec} seconds'}
 
     def pagination(self, data):
-        button = self.driver.find_elements_by_xpath(data['input'])
-        button[0].click()
-        time.sleep(2)
-        return {"response": f"current url: {self.driver.current_url}"}
+        for _ in range(35):
+            button = self.driver.find_elements_by_xpath(data['input'])
+            app.logger.info(button[0])
+            actions = ActionChains(self.driver)
+            actions.move_to_element(button[0]).perform()
+            button[0].click()
+            time.sleep(5)
+            return {"response": f"current url: {self.driver.current_url}"}
 
     def click(self, data):
         button = self.driver.find_elements_by_xpath(data['input'])
@@ -205,7 +209,6 @@ def SeleniumTaskHandler(message):
     type = message['event']['type']
     name = message['event']['name']
     recipes = message['recipes']
-    results = "yolo"
     try:
         with SeleniumWorkerSession() as browser:
             Group = SeleniumGroupTasksLibrary(browser)
@@ -223,7 +226,7 @@ def SeleniumTaskHandler(message):
         app.logger.error(err, exc_info=True)
         results = str(err)
     finally:
-        print('shutdown?')
+        app.logger.info('shutdown')
     return {'response_selenium': {'results':results}}
 
 

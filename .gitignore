@@ -2,6 +2,8 @@ snippets.py
 .DS_Store
 services/elastic-stack/.esdata/
 
+*.code-workspace
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

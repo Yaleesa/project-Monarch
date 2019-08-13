@@ -42,4 +42,4 @@ volumes:
 networks:
   default:
     external:
-      name: scrapetool2019_default
+      name: vacancyTextClassifier_default

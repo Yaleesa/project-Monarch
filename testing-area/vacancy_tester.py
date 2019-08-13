@@ -17,7 +17,7 @@ def write_jsonfile(data, filename):
 
 class vacancyTester:
     def request_worker(self, message, workers):
-        message['event'] = {'type':'actionchain', 'name':'config_tester','workers':workers}
+        message['event'] = {'type':'singleton', 'name':'config_tester','workers':workers}
         payload = json.dumps(message)
         postie = r.post('http://127.0.0.1:5000/api/v1/orchestrator/', data=payload)
         return postie.json()
@@ -27,16 +27,21 @@ configs = import_jsonfile('./uk_configs_2.0')
 configs_combined = import_jsonfile('./uk_combined_02')
 #print(configs[0])
 
-# response = vacancyTester().request_worker()
+# postbody = import_jsonfile('post_body')
+# response = vacancyTester().request_worker(postbody,['selenium'])
 # print(response)
 
-all_configs = []
-for config in configs:
-    response = vacancyTester().request_worker(config, ['selenium'])
-    print(response)
-    break
-    if response['response']['status'] == False:
-        break
+message = import_jsonfile('post_body')
+payload = json.dumps(message)
+response = r.post('http://127.0.0.1:5000/api/v1/orchestrator/', data=payload)
+print(response.json())
+# all_configs = []
+# for config in configs:
+#     response = vacancyTester().request_worker(config, ['selenium'])
+#     print(response)
+#     break
+#     if response['response']['status'] == False:
+#         break
     # config.update(vacancy_unit['response']['results'])
     # all_configs.append(config)
 
